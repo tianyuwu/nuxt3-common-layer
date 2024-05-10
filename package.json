@@ -1,0 +1,22 @@
+{
+  "name": "nuxt3-common-layer",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "build": "nuxt build .playground",
+    "dev": "nuxt dev .playground",
+    "generate": "nuxt generate .playground",
+    "preview": "nuxt preview .playground",
+    "postinstall": "nuxt prepare .playground"
+  },
+  "dependencies": {
+    "nuxt": "^3.11.2",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.3.12"
+  }
+}
