@@ -6,6 +6,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxt/eslint',
+    'nuxt-icon',
+    'nuxt-icons',
     // "@element-plus/nuxt"
   ],
   css: [
