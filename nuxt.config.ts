@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxt/eslint',
-    '@element-plus/nuxt'
+    // "@element-plus/nuxt"
   ],
   css: [
     '@unocss/reset/tailwind.css',
