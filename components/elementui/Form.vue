@@ -1,6 +1,9 @@
 <template>
-  <el-form ref="formRef" class="free-form">
-    <slot></slot>
+  <el-form
+    ref="formRef"
+    class="free-form"
+  >
+    <slot />
   </el-form>
 </template>
 

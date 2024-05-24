@@ -1,25 +1,38 @@
 <template>
   <div class="array-input">
-    <template v-for="(item, index) in bindValue" :key="index">
-      <el-input v-model="bindValue[index]" class="array-item" @change="onChange">
+    <template
+      v-for="(item, index) in bindValue"
+      :key="index"
+    >
+      <el-input
+        v-model="bindValue[index]"
+        class="array-item"
+        @change="onChange"
+      >
         <template #suffix>
-          <el-icon class="pointer" :size="16" @click="onDelete(index)">
-            <Delete />
-          </el-icon>
+          <Icon
+            class="pointer"
+            :size="16"
+            name="ep:delete"
+            @click="onDelete(index)"
+          />
           <!-- <i class="el-icon-close el-input__icon pointer" @click="onDelete(index)"></i> -->
         </template>
       </el-input>
     </template>
-    <el-button type="primary" @click="addItem">添加</el-button>
+    <el-button
+      type="primary"
+      @click="addItem"
+    >
+      添加
+    </el-button>
   </div>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, reactive } from 'vue'
-import { Delete } from '@element-plus/icons-vue'
 export default defineComponent({
   name: 'ArrayInput',
-  components: { Delete },
   props: {
     modelValue: {
       type: Array,
