@@ -11,6 +11,6 @@ export default defineNuxtConfig({
     // "@element-plus/nuxt"
   ],
   css: [
-    '@unocss/reset/tailwind.css',
+    '@unocss/reset/tailwind-compat.css',
   ]
 })

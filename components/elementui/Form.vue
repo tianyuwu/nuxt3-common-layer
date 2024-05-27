@@ -1,25 +1,37 @@
 <template>
-  <el-form
-    ref="formRef"
-    class="free-form"
-  >
+  <el-form ref="formRef">
     <slot />
   </el-form>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  onSubmit: {
-    type: Function,
-    default: () => { },
-  },
+import type { FormInstance } from 'element-plus'
+
+const formRef = ref<FormInstance>()
+
+const emit = defineEmits<{
+  (e: 'submit'): void
+}>()
+
+function onSubmit() {
+  if (!formRef.value) {
+    return
+  }
+  formRef.value.validate((valid: boolean) => {
+    if (valid) {
+      emit('submit')
+    }
+  })
+}
+
+defineExpose({
+  onSubmit,
 })
-const formRef = ref<Nullable<any>>(null)
+
 provide(
   'form',
   reactive({
     instance: formRef,
-    onSubmit: props.onSubmit,
   }),
 )
 </script>
