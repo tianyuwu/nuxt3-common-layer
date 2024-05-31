@@ -17,6 +17,7 @@
     "@pinia/nuxt": "^0.5.1",
     "@unocss/nuxt": "^0.60.0",
     "@vueuse/nuxt": "^10.9.0",
+    "nprogress": "^0.2.0",
     "nuxt": "^3.11.2",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.3.12",
     "nuxt-icon": "^0.6.10",
-    "nuxt-icons": "^3.2.1"
+    "nuxt-icons": "^3.2.1",
+    "nuxt-lodash": "^2.5.3"
   }
 }
