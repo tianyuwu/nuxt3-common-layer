@@ -8,8 +8,12 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     'nuxt-icon',
     'nuxt-icons',
+    'nuxt-lodash',
     // "@element-plus/nuxt"
   ],
+  lodash: {
+    prefix: '_',
+  },
   css: [
     '@unocss/reset/tailwind-compat.css',
   ]
