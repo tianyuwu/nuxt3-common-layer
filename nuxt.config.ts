@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-icons',
     'nuxt-lodash',
+    '@element-plus/nuxt'
   ],
   lodash: {
     prefix: '_',
