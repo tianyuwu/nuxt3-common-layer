@@ -1,7 +1,6 @@
 <template>
   <div class="bg-#fff p-20px">
-    <ElementuiPageTable
-v-model:pagination="pageState" v-loading="loading" :table-data="tableData"
+    <ElementuiPageTable v-model:pagination="pageState" v-loading="loading" :table-data="tableData"
       :setting="tableSetting" v-bind="$attrs" @search="onSearch">
       <template #header>
         <slot name="header" :show-dialog="showNewdialog" />
@@ -12,15 +11,13 @@ v-model:pagination="pageState" v-loading="loading" :table-data="tableData"
           <el-button type="danger" link @click="onDelete(row)">删除</el-button>
         </slot>
       </template>
-      <template
-v-for="name in Object.keys($slots).filter(item => !['action', 'header'].includes(item))"
+      <template v-for="name in Object.keys($slots).filter(item => !['action', 'header'].includes(item))"
         #[name]="slotData">
         <slot :name="name" v-bind="slotData || {}" />
       </template>
     </ElementuiPageTable>
 
-    <FormDialog
-v-model="dialogVisible" v-model:form-data="formDataInner" :form-setting="formSetting"
+    <FormDialog v-model="dialogVisible" v-model:form-data="formDataInner" :form-setting="formSetting"
       @submit="onSubmit">
       <template #default>
         <slot name="formItem" />
