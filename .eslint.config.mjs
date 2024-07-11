@@ -1,14 +1,3 @@
-import antfu from '@antfu/eslint-config'
+import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default antfu(
-  {
-    formatters: true,
-    unocss: true,
-  },
-  {
-    rules: {
-      'node/prefer-global/process': 'off',
-      'vue/no-v-text-v-html-on-component': 'off',
-    },
-  },
-)
+export default withNuxt()

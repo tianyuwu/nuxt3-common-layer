@@ -1,20 +1,10 @@
-import { definePreset, presetUno, presetAttributify,  presetIcons} from 'unocss';
-import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
+import { definePreset, presetUno, presetAttributify } from 'unocss';
 
 export default definePreset({
   name: 'uno-base-preset',
   presets: [
     presetUno(),
     presetAttributify(),
-    presetIcons({
-      extraProperties: {
-        'display': 'inline-block',
-        'vertical-align': 'middle',
-      },
-      collections: {
-        custom: FileSystemIconLoader('./assets/icons', svg => svg.replace('none', 'currentColor')),
-      },
-    }),
   ],
   shortcuts: [
     {

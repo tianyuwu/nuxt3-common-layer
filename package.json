@@ -19,11 +19,11 @@
     "@vueuse/nuxt": "^10.9.0",
     "nprogress": "^0.2.0",
     "nuxt": "^3.11.2",
+    "unocss": "^0.61.3",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.22.0",
     "@nuxt/eslint-config": "^0.3.12",
     "@types/nprogress": "^0.2.3",
     "nuxt-icon": "^0.6.10",
